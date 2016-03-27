@@ -6,7 +6,7 @@ MiniGuava: Guava for minimalists and Android
 The MiniGuava library provides a small and decoupled alternative for
 [Google Guava](https://github.com/google/guava).
 Original library is monolithic
-and huge ([15000 methods](http://www.methodscount.com/?lib=com.google.guava%3Aguava%3A19.0),
+and huge ([15000 methods](http://www.methodscount.com/?lib=com.google.guava%3Aguava%3A19.0)),
 so it is not suitable for Android development.
 
 Requires JDK 1.6 or higher (as of 12.0).
