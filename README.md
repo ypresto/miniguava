@@ -1,16 +1,13 @@
 MiniGuava: Guava for minimalists and Android
 ============================================
 
-[![Build Status](https://travis-ci.org/yprsto/miniguava.svg?branch=master)](https://travis-ci.org/ypresto/miniguava)
+[![Build Status](https://travis-ci.org/ypresto/miniguava.svg?branch=master)](https://travis-ci.org/ypresto/miniguava)
 
 The MiniGuava library provides a small and decoupled alternative for
-[Google Guava](https://github.com/google/guava). Original library is monolithic
+[Google Guava](https://github.com/google/guava).
+Original library is monolithic
 and huge ([15000 methods](http://www.methodscount.com/?lib=com.google.guava%3Aguava%3A19.0),
 so it is not suitable for Android development.
-
-The Guava project contains several of Google's core libraries that we rely on
-in our Java-based projects: collections, caching, primitives support,
-concurrency libraries, common annotations, string processing, I/O, and so forth.
 
 Requires JDK 1.6 or higher (as of 12.0).
 
