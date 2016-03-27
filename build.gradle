@@ -34,6 +34,7 @@ afterEvaluate {
             apply plugin: 'com.novoda.bintray-release'
 
             publish {
+                uploadName = 'miniguava'
                 groupId = 'net.ypresto.miniguava'
                 artifactId = project.name
                 publishVersion = '19.0.0-beta1'
