@@ -1,0 +1,1 @@
+include ':miniguava-base', ':miniguava-collect', ':miniguava-compare', ':miniguava-collect-immutables', ':dummy-android-module'

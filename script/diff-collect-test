@@ -1,0 +1,18 @@
+#!/bin/bash
+
+source script/lib/diff-lib.sh
+
+SOURCE_DIR="miniguava-collect/src/test/java/net/ypresto/miniguava/collect"
+GUAVA_DIR="$GUAVA_ROOT_DIR/guava-tests/test/com/google/common/collect"
+GUAVA_BASE_DIR="$GUAVA_ROOT_DIR/guava-tests/test/com/google/common/base"
+
+find "$SOURCE_DIR" -type f -name '*.java' \
+  | grep -vE '.*/EquivalenceTest\.java$|.*/internal/.*|/Internal.*\.java$' \
+  | while read full_path; do
+  rel_path="${full_path#$SOURCE_DIR/}"
+  show_diff "$GUAVA_DIR" "$SOURCE_DIR" "$rel_path" "$@" || exit 1
+done || die
+
+show_diff "$GUAVA_BASE_DIR" "$SOURCE_DIR" "EquivalenceTest.java" "$@" || die
+# There is no AbstractIndexedListIteratorTest.
+show_diff "$GUAVA_DIR" "$SOURCE_DIR/internal" "AbstractMapEntryTest.java" "$@" || die

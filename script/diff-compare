@@ -1,0 +1,13 @@
+#!/bin/bash
+
+source script/lib/diff-lib.sh
+
+SOURCE_DIR="miniguava-compare/src/main/java/net/ypresto/miniguava/compare"
+GUAVA_DIR="$GUAVA_ROOT_DIR/guava/src/com/google/common/collect"
+
+find "$SOURCE_DIR" -type f -name '*.java' \
+  | grep -vE '/PrimitiveComparison.java$|.*/internal/.*|/Internal.*\.java$' \
+  | while read full_path; do
+  rel_path="${full_path#$SOURCE_DIR/}"
+  show_diff "$GUAVA_DIR" "$SOURCE_DIR" "$rel_path" "$@" || exit 1
+done || die

@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+dependencies {
+    compile project(':miniguava-base')
+    testCompile 'junit:junit:4.8.2'
+    testCompile 'com.google.guava:guava-testlib:19.0'
+    testCompile 'com.google.truth:truth:0.25'
+    testCompile 'org.easymock:easymock:3.0'
+}

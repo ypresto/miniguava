@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="net.ypresto.miniguava.dummy_android_module">
+
+    <application
+        android:allowBackup="true"
+        android:label="dummy-android-module"
+        android:supportsRtl="true"
+        >
+
+    </application>
+
+</manifest>
