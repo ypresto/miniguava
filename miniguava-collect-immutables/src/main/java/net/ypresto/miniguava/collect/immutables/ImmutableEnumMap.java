@@ -23,7 +23,6 @@ import net.ypresto.miniguava.collect.immutables.ImmutableMap.IteratorBasedImmuta
 
 import java.io.Serializable;
 import java.util.EnumMap;
-import java.util.Map;
 
 import javax.annotation.Nullable;
 
@@ -40,7 +39,7 @@ final class ImmutableEnumMap<K extends Enum<K>, V> extends IteratorBasedImmutabl
       case 0:
         return ImmutableMap.of();
       case 1:
-        Map.Entry<K, V> entry = InternalUtils.getOnlyElement(map.entrySet());
+        Entry<K, V> entry = InternalUtils.getOnlyElement(map.entrySet());
         return ImmutableMap.of(entry.getKey(), entry.getValue());
       default:
         return new ImmutableEnumMap<K, V>(map);
@@ -86,7 +85,7 @@ final class ImmutableEnumMap<K extends Enum<K>, V> extends IteratorBasedImmutabl
   }
 
   @Override
-  UnmodifiableIterator<Map.Entry<K, V>> entryIterator() {
+  UnmodifiableIterator<Entry<K, V>> entryIterator() {
     return InternalUtils.unmodifiableEntryIterator(delegate.entrySet().iterator());
   }
 

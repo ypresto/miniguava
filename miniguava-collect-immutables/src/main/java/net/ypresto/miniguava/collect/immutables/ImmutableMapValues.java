@@ -64,8 +64,8 @@ final class ImmutableMapValues<K, V> extends ImmutableCollection<V> {
     if (object == null) {
       return false;
     }
-    for (Entry<K, V> entry : map.entrySet()) {
-      if (entry.getValue().equals(object)) {
+    for (V value : this) {
+      if (value.equals(object)) {
         return true;
       }
     }

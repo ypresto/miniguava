@@ -54,7 +54,7 @@ public class ImmutableEnumMapTest extends TestCase {
   public static Test suite() {
     TestSuite suite = new TestSuite();
     suite.addTest(MapTestSuiteBuilder.using(new ImmutableEnumMapGenerator())
-      .named("Maps.immutableEnumMap")
+      .named("Immutables.immutableEnumMap")
       .withFeatures(CollectionSize.ANY,
           SERIALIZABLE,
           ALLOWS_NULL_QUERIES)

@@ -24,6 +24,7 @@ import static net.ypresto.miniguava.collect.immutables.RegularImmutableList.EMPT
 
 import net.ypresto.miniguava.collect.UnmodifiableIterator;
 import net.ypresto.miniguava.collect.UnmodifiableListIterator;
+import net.ypresto.miniguava.collect.internal.AbstractIndexedListIterator;
 
 import java.io.InvalidObjectException;
 import java.io.ObjectInputStream;
@@ -292,7 +293,7 @@ public abstract class ImmutableList<E> extends ImmutableCollection<E>
 
   @Override
   public UnmodifiableListIterator<E> listIterator(int index) {
-    return new net.ypresto.miniguava.collect.internal.AbstractIndexedListIterator<E>(size(), index) {
+    return new AbstractIndexedListIterator<E>(size(), index) {
       @Override
       protected E get(int index) {
         return ImmutableList.this.get(index);
