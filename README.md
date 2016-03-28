@@ -27,6 +27,7 @@ MODULES
   - PrimitiveComparison (contains Ints.compare() and etc.)
 - `net.ypresto.miniguava:miniguava-collect:19.0.0-beta1`
   - Subset of Lists, Maps and Sets
+  - MapMaker
 - `net.ypresto.miniguava:miniguava-collect-immutables:19.0.0-beta1`
   - ImmutableXX from collect package.
   - Almost all things other than BiXX, MultiXX, SortedXX
