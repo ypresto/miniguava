@@ -35,14 +35,12 @@ MODULES
 INSTALLATION
 ------------
 
-Will soon available from jcenter.
-Currently you can try with below snippet.
+Available from jcenter.
 
 ```groovy
-repositories {
-    maven {
-        url  "http://dl.bintray.com/ypresto/maven"
-    }
+dependencies {
+    compile 'net.ypresto.miniguava:miniguava-base:19.0.0-beta1'
+    ...
 }
 ```
 
