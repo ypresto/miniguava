@@ -9,7 +9,7 @@ Original library is monolithic
 and huge ([15000 methods](http://www.methodscount.com/?lib=com.google.guava%3Aguava%3A19.0)),
 so it is not suitable for Android development.
 
-Requires JDK 1.6 or higher (as of 12.0).
+Requires JDK 1.6 or higher.
 
 Some of methods requires API level 9 in Android (e.g. newSetFromMap()).
 
